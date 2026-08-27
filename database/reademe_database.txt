@@ -1,0 +1,53 @@
+DATABASE SETUP INSTRUCTIONS
+
+Database Name:
+event_&_ticket_management
+
+
+Tables Included:
+
+1. users
+2. events
+3. registrations
+
+
+TABLE RELATIONSHIPS:
+
+events.organizer_id
+        ↓
+users.user_id
+
+
+registrations.user_id
+        ↓
+users.user_id
+
+
+registrations.event_id
+        ↓
+events.event_id
+
+
+HOW TO IMPORT:
+
+1. Start XAMPP.
+2. Start MySQL.
+3. Open phpMyAdmin:
+   http://localhost/phpmyadmin
+
+4. Click Import.
+5. Select:
+   event_ticket_management.sql
+
+6. Click Import / Go.
+
+The database and all three tables will be created automatically.
+
+
+IMPORTANT:
+
+Do not create separate versions of the users table.
+All group members should use the same users table structure.
+
+When changes are made to the database structure,
+update the SQL file and push the changes to GitHub.
