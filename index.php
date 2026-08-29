@@ -59,8 +59,7 @@ $result = mysqli_query($conn, $sql);
                 <div class="event-card">
 
                     <h2>
-                        <?php echo $event['event_name']; ?>
-                    </h2>
+                        <?php echo $event['event_name']; ?></h2>
 
                     <p>
                         <?php echo $event['description']; ?>
