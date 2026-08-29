@@ -103,8 +103,11 @@ $result = mysqli_query($conn, $sql);
         You visited this page
         <?php echo $_SESSION['visit_count']; ?>
         times.
-    </p>
-
+    </p><br>
+    <!--back to home button-->
+     <a href="index.php" class="home-button">
+       <h3>Back to Home</h3>
+     </a>
 
     <!-- SEARCH -->
 
@@ -120,7 +123,7 @@ $result = mysqli_query($conn, $sql);
         <button type="submit">
             Search
         </button>
-
+     <br><br>
     </form>
 
 
@@ -166,11 +169,11 @@ $result = mysqli_query($conn, $sql);
             ?>
 
         </select>
-
+          
         <button type="submit">
             Filter
         </button>
-
+      <br><br>
     </form>
 
 
@@ -203,6 +206,7 @@ $result = mysqli_query($conn, $sql);
                     </a>
 
                 </div>
+               
 
         <?php
 
