@@ -83,9 +83,7 @@ $result = mysqli_query($conn, $sql);
                         ?>
                     </p>
 
-                    <a href="event-details.php?id=<?php echo $event['event_id']; ?>">
-                        View Details
-                    </a>
+                    <a href="event-details.php?id=<?php echo $event['event_id']; ?>"> View Details </a>
 
                 </div>
 
