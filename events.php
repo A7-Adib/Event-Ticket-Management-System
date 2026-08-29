@@ -53,6 +53,9 @@ if (isset($_GET['search'])) {
 if (isset($_GET['category'])) {
     $category = $_GET['category'];
 } 
+
+
+
 elseif ($last_category != "") {
     $category = $last_category;
 }
@@ -66,13 +69,12 @@ $sql = "SELECT * FROM events WHERE 1=1";
 
 if ($search != "") {
     $sql .= " AND (event_name LIKE '%$search%' 
-              OR location LIKE '%$search%')";
+               OR location LIKE '%$search%')";
 }
 
 if ($category != "") {
     $sql .= " AND category_id = $category";
 }
-
 $result = mysqli_query($conn, $sql);
 
 ?>
