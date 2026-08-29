@@ -58,7 +58,9 @@ $event = mysqli_fetch_assoc($result);
     <?php echo $event['status']; ?>
 </p>
 
-        <a href="events.php">Back to Events</a>
+        <a href="events.php">
+            <h3>Back to Events</h3>
+        </a>
 
     </div>
 
