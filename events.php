@@ -106,7 +106,7 @@ $result = mysqli_query($conn, $sql);
     </p><br>
     <!--back to home button-->
      <a href="index.php" class="home-button">
-       <h3>Back to Home</h3>
+       <h2>Back to Home</h2>
      </a>
 
     <!-- SEARCH -->
