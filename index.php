@@ -72,12 +72,15 @@ $result = mysqli_query($conn, $sql);
 
                     <p>
                         <b>Time:</b>
+
+
                         <?php echo $event['time']; ?>
                     </p>
 
                     <p>
                         <b>Location:</b>
-                        <?php echo $event['location']; ?>
+                        <?php echo $event['location']; 
+                        ?>
                     </p>
 
                     <a href="event-details.php?id=<?php echo $event['event_id']; ?>">
