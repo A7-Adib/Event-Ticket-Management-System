@@ -27,7 +27,9 @@ $result = mysqli_query($conn, $sql);
 
     <h1>Welcome to Event Management System</h1>
 
-    <p>Discover upcoming events and explore event details.</p>
+  <p>
+    Discover upcoming events and explore event details easily.
+</p>
          <br>
 
         <!-- Search and Filter Button -->
