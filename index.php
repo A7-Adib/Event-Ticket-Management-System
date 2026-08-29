@@ -62,7 +62,7 @@ $result = mysqli_query($conn, $sql);
                         <?php echo $event['event_name']; ?></h2>
 
                     <p>
-                        <?php echo $event['description']; ?>
+                      <?php echo $event['description']; ?>
                     </p>
 
                     <p>
