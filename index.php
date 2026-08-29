@@ -24,9 +24,8 @@ $result = mysqli_query($conn, $sql);
 
 <div class="container">
 
-    
 
-    <h1>Event Management System</h1>
+    <h1>Welcome to Event Management System</h1>
 
     <p>Discover upcoming events and explore event details.</p>
          <br>
