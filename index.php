@@ -66,8 +66,8 @@ $result = mysqli_query($conn, $sql);
                     </p>
 
                     <p>
-                        <b>Date:</b>
-                        <?php echo $event['date']; ?>
+                         <b>Date:</b>
+                          <?php echo $event['date']; ?>
                     </p>
 
                     <p>
