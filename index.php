@@ -29,13 +29,16 @@ $result = mysqli_query($conn, $sql);
 
   <p>
     Discover upcoming events and explore event details easily.
-</p>
+  </p>
          <br>
 
-        <!-- Search and Filter Button -->
+        
+
         <a href="events.php" class="search-filter-button">
-           <h2>Search & Filter Events</h2>
-                </a>
+           Search & Filter Events
+         </a>
+
+<br><br>  
     
 
     <h2>Upcoming Events</h2>
