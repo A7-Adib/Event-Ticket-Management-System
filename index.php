@@ -35,7 +35,7 @@ $result = mysqli_query($conn, $sql);
         
 
         <a href="events.php" class="search-filter-button">
-           Search & Filter Events
+           <h2>Search & Filter Events</h2>
          </a>
 
 <br><br>  
