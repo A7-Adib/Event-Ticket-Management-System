@@ -25,40 +25,38 @@ $event = mysqli_fetch_assoc($result);
 
 <div class="container">
 
-    <h1>Event Details</h1>
+    <h2>
+    <?php echo $event['event_name']; ?>
+</h2>
 
-    <div class="event-card">
+<p>
+    <?php echo $event['description']; ?>
+</p>
 
-        <h2><?php echo $event['event_name']; ?></h2>
+<p>
+    <b>Date:</b>
+    <?php echo $event['date']; ?>
+</p>
 
-        <p>
-            <?php echo $event['description']; ?>
-        </p>
+<p>
+    <b>Time:</b>
+    <?php echo $event['time']; ?>
+</p>
 
-        <p>
-            <b>Date:</b>
-            <?php echo $event['date']; ?>
-        </p>
+<p>
+    <b>Location:</b>
+    <?php echo $event['location']; ?>
+</p>
 
-        <p>
-            <b>Time:</b>
-            <?php echo $event['time']; ?>
-        </p>
+<p>
+    <b>Capacity:</b>
+    <?php echo $event['capacity']; ?>
+</p>
 
-        <p>
-            <b>Location:</b>
-            <?php echo $event['location']; ?>
-        </p>
-
-        <p>
-            <b>Capacity:</b>
-            <?php echo $event['capacity']; ?>
-        </p>
-
-        <p>
-            <b>Status:</b>
-            <?php echo $event['status']; ?>
-        </p>
+<p>
+    <b>Status:</b>
+    <?php echo $event['status']; ?>
+</p>
 
         <a href="events.php">Back to Events</a>
 
