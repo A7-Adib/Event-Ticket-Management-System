@@ -64,29 +64,10 @@ $result = mysqli_query($conn, $sql);
                     <h2>
                         <?php echo $event['event_name']; ?></h2>
 
-                    <p>
-                      <?php echo $event['description']; ?>
-                    </p>
-
-                    <p>
-                         <b>Date:</b>
-                          <?php echo $event['date']; ?>
-                    </p>
-
-                    <p>
-                        <b>Time:</b>
-
-
-                        <?php echo $event['time']; ?>
-                    </p>
-
-                    <p>
-                        <b>Location:</b>
-                        <?php echo $event['location']; 
-                        ?>
-                    </p>
-
-                    <a href="event-details.php?id=<?php echo $event['event_id']; ?>"> View Details </a>
+                    
+                    <a href="event-details.php?id=<?php echo $event['event_id']; ?>">
+                        <h3>View Details</h3>
+                    </a>
 
                 </div>
 
