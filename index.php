@@ -51,7 +51,7 @@
                    class="btn btn-primary btn-lg"
                    id="organizer-btn">
 
-                    Organizer Portal
+                     Organizer Portal
 
                 </a>
 
@@ -59,13 +59,109 @@
                    class="btn btn-secondary btn-lg"
                    id="participant-btn">
 
-                     Browse Events
+                    Browse Events
 
                 </a>
 
             </div>
 
         </section>
+
+
+        <div class="section-title">
+            What's included
+        </div>
+
+        <div class="feature-grid" id="features">
+
+            <div class="feature-item">
+
+                <div class="feature-item-icon">
+                    
+                </div>
+
+                <div>
+
+                    <h4>
+                        Create Events
+                    </h4>
+
+                    <p>
+                        Add events with full details including
+                        date, time, location &amp; capacity.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-item-icon">
+                    
+                </div>
+
+                <div>
+
+                    <h4>
+                        Manage &amp; Edit
+                    </h4>
+
+                    <p>
+                        Update event information, change statuses,
+                        and keep records current.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-item-icon">
+                    
+                </div>
+
+                <div>
+
+                    <h4>
+                        Participant Tracking
+                    </h4>
+
+                    <p>
+                        View all registrations and update
+                        participant statuses in real time.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-item-icon">
+                    
+                </div>
+
+                <div>
+
+                    <h4>
+                        Smart Event Search
+                    </h4>
+
+                    <p>
+                        Search and filter events by name,
+                        category, date, or location instantly.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
