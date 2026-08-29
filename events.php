@@ -152,9 +152,7 @@ $result = mysqli_query($conn, $sql);
 
                     if ($category == $cat['category_id']) {
                         echo "selected";
-                    }
-
-                    ?>
+                    }?>
                 >
 
                     <?php echo $cat['category_name']; ?>
