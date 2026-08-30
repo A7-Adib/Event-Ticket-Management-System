@@ -1,7 +1,7 @@
 <?php
 
-require_once 'config/database.php';
+include "config.php";
 
-echo "<h1>Database Connected Successfully!</h1>";
+echo "Database Connected Successfully!";
 
 ?>
