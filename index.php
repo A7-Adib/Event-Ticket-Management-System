@@ -1,22 +1,34 @@
-
-<?php
-
-include "database.php";
-//event details
-// Get all events from database
-$sql = "SELECT * FROM events";
-$result = mysqli_query($conn, $sql);
-
-?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
-
     <title>Event Management System</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+        }
+
+        .container {
+            width: 500px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        a {
+            display: block;
+            margin: 15px;
+            padding: 12px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 
 </head>
 
@@ -24,70 +36,32 @@ $result = mysqli_query($conn, $sql);
 
 <div class="container">
 
+    <h1>Event Management System</h1>
 
-    <h1>Welcome to Event Management System</h1>
+    <h2>Person 4 — Samia</h2>
 
-  <p>
-    Discover upcoming events and explore event details easily.
-  </p>
-         <br>
+    <a href="generate_ticket.php">
+         Ticket Management
+    </a>
 
-        
+    <a href="verify_ticket.php">
+         Verify Ticket
+    </a>
 
-        <a href="events.php" class="search-filter-button">
-           <h2>Search & Filter Events</h2>
-         </a>
+    <a href="checkin.php">
+         Event Staff Check-in
+    </a>
 
-<br><br>  
-    
+    <a href="add_announcement.php">
+         Add Announcement
+    </a>
 
-    <h2>Upcoming Events</h2>
-
-
-
-<br>
-
-<div class="event-grid">
-    <!-- Events -->
-
-    
-        <?php
-
-        if (mysqli_num_rows($result) > 0) {
-
-            while ($event = mysqli_fetch_assoc($result)) {
-
-        ?>
-
-                <div class="event-card">
-
-                    <h2>
-                        <?php echo $event['event_name']; ?></h2>
-
-                    
-                    <a href="event-details.php?id=<?php echo $event['event_id']; ?>">
-                        <h3>View Details</h3>
-                    </a>
-
-                </div>
-
-        <?php
-
-            }
-
-        } else {
-
-            echo "<p>No events available.</p>";
-
-        }
-
-        ?>
-
-    </div>
+    <a href="announcements.php">
+         View Announcements
+    </a>
 
 </div>
 
 </body>
 
 </html>
-
