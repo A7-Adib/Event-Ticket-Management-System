@@ -11,14 +11,22 @@ if (isset($_SESSION['user_id'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Welcome - Event and Ticket Management</title>
+
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+
+    <!-- Homepage Image -->
+     <div class="hero-image">
+     <img src="image/event-banner.jpg" alt="Event Image" width="1500">
+     </div>
 
     <h1>Welcome to Event and Ticket Management System</h1>
 
@@ -35,4 +43,5 @@ if (isset($_SESSION['user_id'])) {
     </a>
 
 </body>
+
 </html>
