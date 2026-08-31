@@ -1,0 +1,61 @@
+/* Forms */
+
+.form-box {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    max-width: 650px;
+    margin: auto;
+}
+
+.form-box h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 18px;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.btn-success {
+    background: #16a34a;
+}
+
+.btn-success:hover {
+    background: #15803d;
+}
