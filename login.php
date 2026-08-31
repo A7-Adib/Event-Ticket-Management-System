@@ -76,10 +76,10 @@ if (isset($_POST['login'])) {
 </form>
 
 <br>
-
 <a href="index.php">
     <button type="button">Back to Homepage</button>
 </a>
+
 
 </body>
 
