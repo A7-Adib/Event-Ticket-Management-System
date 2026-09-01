@@ -1,16 +1,14 @@
 <?php
 
 $host = "localhost";
-$username = "root";
+$user = "root";
 $password = "";
 $database = "event_management";
 
-$conn = mysqli_connect($host, $username, $password, $database);
+$conn = new mysqli($host, $user, $password, $database);
 
-if (!$conn) {
-    die("Database connection failed: " . mysqli_connect_error());
+if ($conn->connect_error) {
+    die("Database connection failed: " . $conn->connect_error);
 }
-
-echo "Database connected successfully!";
 
 ?>
