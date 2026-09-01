@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /Event-Ticket-Management-System/
+
+# Never expose application internals or database files.
+RewriteRule ^(?:app|database)(?:/|$) - [F,L]
+
+# Static assets live under public/assets.
+RewriteRule ^assets/(.*)$ public/assets/$1 [L]
+RewriteRule ^public/(.*)$ public/$1 [L]
+
+# Everything else goes through the MVC front controller.
+RewriteRule ^$ public/index.php [L]
+RewriteRule ^(.*)$ public/index.php [L,QSA]
+
+Options -Indexes
