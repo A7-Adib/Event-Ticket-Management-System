@@ -25,7 +25,7 @@ $result = mysqli_query($conn, $sql);
 <div class="container"> 
 
 <div class="hero"> 
-   <img src="image/event-banner.png" alt="Event Banner" width="1200px" height="900px"> 
+  <img src="image/event-banner.jpg" alt="Event Banner" width="1200px" height="900px">
 </div> 
 
     <h1>Welcome to Event Management System</h1> 
