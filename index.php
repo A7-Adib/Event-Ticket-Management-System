@@ -1,92 +1,143 @@
+<?php
+require_once 'config/database.php';
 
-<?php 
+// Get upcoming events
+$sql = "SELECT * FROM events ORDER BY date ASC, event_id ASC";
+$result = $conn->query($sql);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EventFlow - Event and Ticket Management System">
+    <title>EventFlow — Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-include "database.php"; 
-//event details 
-// Get all events from database 
-$sql = "SELECT * FROM events"; 
-$result = mysqli_query($conn, $sql); 
+<body>
 
-?> 
+<?php
+$base = '';
+$active = 'home';
+require 'includes/nav.php';
+?>
 
-<!DOCTYPE html> 
-<html> 
+<div class="page-wrapper">
 
-<head> 
+    <div class="page-header">
+        <h1>Welcome to EventFlow</h1>
+        <p>Discover upcoming events, create events, and manage participants easily.</p>
+    </div>
 
-    <title>Event Management System</title> 
+    <div class="card" style="margin-bottom: 2rem;">
+        <h2>Event & Ticket Management System</h2>
+        <p>
+            Browse available events and register for the events you want to attend.
+            Organizers can also create, edit, and manage events and participants.
+        </p>
 
-    <link rel="stylesheet" href="css/style.css"> 
+        <div style="margin-top: 1.25rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <a href="participant/events.php" class="btn btn-primary">
+                Browse Events
+            </a>
 
-</head> 
+            <a href="organizer/create_event.php" class="btn btn-secondary">
+                Create Event
+            </a>
+        </div>
+    </div>
 
-<body> 
+    <div class="page-header">
+        <h2>Upcoming Events</h2>
+        <p>Explore the events currently available in the system.</p>
+    </div>
 
-<div class="container"> 
+    <?php if ($result && $result->num_rows > 0): ?>
 
-<div class="hero"> 
-  <img src="image/event-banner.jpg" alt="Event Banner" width="1200px" height="900px">
-</div> 
+        <div class="event-grid">
 
-    <h1>Welcome to Event Management System</h1> 
+            <?php while ($event = $result->fetch_assoc()): ?>
 
-  <p> 
-    Discover upcoming events and explore event details easily. 
-  </p> 
+                <div class="event-card">
 
-         <br> 
+                    <div class="event-card-header">
+                        <h2>
+                            <?php echo htmlspecialchars($event['event_name']); ?>
+                        </h2>
 
-        <a href="events.php" class="search-filter-button"> 
-           <h2>Search & Filter Events</h2> 
-         </a> 
+                        <?php
+                        $status = strtolower($event['status']);
+                        ?>
 
-<br><br>   
-     
-    <h2>Upcoming Events</h2> 
+                        <span class="badge badge-<?php echo htmlspecialchars($status); ?>">
+                            <?php echo htmlspecialchars($event['status']); ?>
+                        </span>
+                    </div>
 
-<br> 
+                    <?php if (!empty($event['description'])): ?>
+                        <p class="description">
+                            <?php
+                            echo htmlspecialchars(
+                                mb_strimwidth($event['description'], 0, 100, '...')
+                            );
+                            ?>
+                        </p>
+                    <?php endif; ?>
 
-<div class="event-grid"> 
-    <!-- Events --> 
+                    <div class="meta-row">
+                        <span class="meta-icon">📅</span>
+                        <span>
+                            <?php echo htmlspecialchars($event['date']); ?>
+                        </span>
+                    </div>
 
-        <?php 
+                    <div class="meta-row">
+                        <span class="meta-icon">📍</span>
+                        <span>
+                            <?php echo htmlspecialchars($event['location']); ?>
+                        </span>
+                    </div>
 
-        if (mysqli_num_rows($result) > 0) { 
+                    <div class="card-footer">
 
-            while ($event = mysqli_fetch_assoc($result)) { 
+                        <div class="capacity-info">
+                            👥 <?php echo (int)$event['capacity']; ?> seats
+                        </div>
 
-        ?> 
+                        <a
+                            href="event-details.php?id=<?php echo (int)$event['event_id']; ?>"
+                            class="btn btn-primary btn-sm"
+                        >
+                            View Details
+                        </a>
 
-                <div class="event-card"> 
+                    </div>
 
-                    
-                    <h2> 
-                        <?php echo $event['event_name']; ?> 
-                    </h2> 
+                </div>
 
-                    <a href="event-details.php?id=<?php echo $event['event_id']; ?>"> 
-                        <h3>View Details</h3> 
-                    </a> 
+            <?php endwhile; ?>
 
-                </div> 
+        </div>
 
-        <?php 
+    <?php else: ?>
 
-            } 
+        <div class="card">
+            <div class="empty-state">
+                <h3>No events available</h3>
+                <p>New events will appear here when they are created.</p>
 
-        } else { 
+                <a href="organizer/create_event.php" class="btn btn-primary">
+                    Create First Event
+                </a>
+            </div>
+        </div>
 
-            echo "<p>No events available.</p>"; 
+    <?php endif; ?>
 
-        } 
+</div>
 
-        ?> 
+<?php require 'includes/footer.php'; ?>
 
-    </div> 
-
-</div> 
-
-</body> 
-
+</body>
 </html>
-

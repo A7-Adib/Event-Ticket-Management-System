@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$dbname = "webtech_project";
+$dbname = "event_&_ticket_management";
 
 $conn = new mysqli($host, $user, $pass, $dbname);
 

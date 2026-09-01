@@ -3,7 +3,7 @@
 $host = "localhost";
 $username = "root";
 $password = "";
-$database = "Event-Ticket-Management-System";
+$database = "event-ticket-management-system";
 
 $conn = new mysqli($host, $username, $password, $database);
 
