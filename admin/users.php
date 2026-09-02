@@ -28,6 +28,7 @@ $user = mysqli_fetch_assoc($result);
 <p><strong>Role:</strong> <?php echo $user['role']; ?></p>
 
 <br>
+
 <a href="update_profile.php">Edit Profile</a> | 
 <a href="logout.php">Logout</a>
 
