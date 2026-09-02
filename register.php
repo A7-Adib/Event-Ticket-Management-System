@@ -11,7 +11,7 @@ if (isset($_POST['register'])) {
 
     if ($password != $confirm_password) {
 
-        echo "Passwords do not match!";
+        echo "Passwords do not match!..";
 
     } else {
 
