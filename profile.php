@@ -66,6 +66,7 @@ if (!$user) {
 
     <p>
         <strong>Role:</strong>
+        
         <?php echo htmlspecialchars($user['role']); ?>
     </p>
 
