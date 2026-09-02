@@ -15,7 +15,8 @@ if (isset($_POST['register'])) {
 
     } else {
 
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $hashed_password = 
+        password_hash($password, PASSWORD_DEFAULT);
 
         $sql = "INSERT INTO users (name, email, password)
                 VALUES ('$name', '$email', '$hashed_password')";
